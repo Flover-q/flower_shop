@@ -13,3 +13,4 @@ dist/
 docs/_build/
 .coverage
 htmlcov/
+.fonts/
