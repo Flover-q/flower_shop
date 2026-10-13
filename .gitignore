@@ -1,0 +1,15 @@
+__pycache__/
+*.pyc
+*.pyo
+build/
+dist/
+*.spec
+*.db
+*.log
+.vscode/
+.idea/
+*.bak
+*.tmp
+docs/_build/
+.coverage
+htmlcov/
