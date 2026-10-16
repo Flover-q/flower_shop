@@ -177,7 +177,7 @@ def init_db():
         pass
 
 
-# ─── КЛИЕНТЫ ───────────────────────────────────────────────
+# КЛИЕНТЫ 
 def get_clients():
     with _connect() as con:
         cur = con.cursor()
@@ -207,15 +207,17 @@ def delete_client(name, phone):
         con.commit()
 
 
-# ─── БУКЕТЫ ────────────────────────────────────────────────
+# БУКЕТЫ 
 def get_bouquets():
-    """Возвращает список словарей со всеми букетами."""
+    """Возвращает список словарей со всеми букетами (без архивных)."""
     with _connect() as con:
         cur = con.cursor()
         cur.execute("""
             SELECT id, date, name, flowers, pack, size, work, total, cost,
                    sold, count, initial_count
-            FROM bouquets ORDER BY id DESC
+            FROM bouquets
+            WHERE sold != 2
+            ORDER BY id DESC
         """)
         rows = cur.fetchall()
     return [
@@ -234,7 +236,7 @@ def get_bouquets():
 
 def add_bouquet(date, name, flowers, pack, size, work, total, cost,
                 sold=0, count=1):
-    """Добавляет букет. sold=0 — не продан. count — сколько штук."""
+    """Добавляет букет + пишет в аналитику."""
     with _connect() as con:
         cur = con.cursor()
         cur.execute("""
@@ -246,13 +248,31 @@ def add_bouquet(date, name, flowers, pack, size, work, total, cost,
               count, count))
         con.commit()
 
+    try:
+        add_analytics(date, bouquets=count, profit=0, spisano=0)
+    except Exception:
+        pass
+
 
 def delete_bouquet_by_name(name, date):
+    """Мягкое удаление (Soft Delete): sold = 2, count = 0."""
     with _connect() as con:
         cur = con.cursor()
         cur.execute(
-            "DELETE FROM bouquets WHERE name = ? AND date = ?",
+            "UPDATE bouquets SET count = 0, sold = 2 "
+            "WHERE name = ? AND date = ?",
             (name, date)
+        )
+        con.commit()
+
+
+def delete_bouquet_by_id(bouquet_id):
+    """Мягкое удаление по id: sold = 2, count = 0."""
+    with _connect() as con:
+        cur = con.cursor()
+        cur.execute(
+            "UPDATE bouquets SET count = 0, sold = 2 WHERE id = ?",
+            (bouquet_id,)
         )
         con.commit()
 
@@ -280,8 +300,7 @@ def update_bouquet_count(bouquet_id, new_count):
 
 
 def update_bouquet_initial_count(bouquet_id, new_count):
-    """Меняет «Было всего» (initial_count) у букета.
-    Если букет НЕ продан — синхронизирует и count."""
+    """Меняет «Было всего» (initial_count) у букета."""
     with _connect() as con:
         cur = con.cursor()
         cur.execute(
@@ -309,7 +328,7 @@ def update_bouquet_initial_count(bouquet_id, new_count):
 
 
 def count_unsold_bouquets():
-    """Сколько букетов сейчас в наличии (сумма count у не проданных)."""
+    """Сколько букетов сейчас в наличии."""
     with _connect() as con:
         cur = con.cursor()
         cur.execute(
@@ -319,7 +338,7 @@ def count_unsold_bouquets():
 
 
 def count_bouquets_total():
-    """Сколько всего букетов собрано (сумма initial_count)."""
+    """Сколько всего букетов собрано."""
     with _connect() as con:
         cur = con.cursor()
         cur.execute("SELECT COALESCE(SUM(initial_count), 0) FROM bouquets")
@@ -327,69 +346,58 @@ def count_bouquets_total():
 
 
 def count_unsold_by_name(name):
-    """Сколько таких же букетов по названию сейчас не продано.
-    Сравнение без учёта регистра."""
+    """Сколько таких же букетов по названию сейчас не продано."""
     if not name:
         return 0
     clean = name.strip().lower()
     with _connect() as con:
         cur = con.cursor()
-        cur.execute(
-            "SELECT COALESCE(SUM(count), 0) FROM bouquets "
-            "WHERE LOWER(TRIM(name)) = ? AND sold = 0",
-            (clean,)
-        )
-        return cur.fetchone()[0] or 0
+        cur.execute("SELECT name, count FROM bouquets WHERE sold = 0")
+        rows = cur.fetchall()
+    return sum(
+        (r[1] or 0) for r in rows
+        if r[0] and r[0].strip().lower() == clean
+    )
 
 
 def get_bouquet_total_by_name(name):
-    """Возвращает стоимость (total) последнего собранного букета с таким именем.
-    Сравнение без учёта регистра. Если букетов нет — 0."""
+    """Возвращает total последнего букета с таким именем."""
     if not name:
         return 0
     clean = name.strip().lower()
     with _connect() as con:
         cur = con.cursor()
-        cur.execute("""
-            SELECT total FROM bouquets
-            WHERE LOWER(TRIM(name)) = ?
-            ORDER BY id DESC
-            LIMIT 1
-        """, (clean,))
-        row = cur.fetchone()
-        if row is None or row[0] in (None, ""):
-            return 0
-        try:
-            return int(float(row[0]))
-        except (TypeError, ValueError):
-            return 0
+        cur.execute("SELECT name, total FROM bouquets ORDER BY id DESC")
+        rows = cur.fetchall()
+    for r in rows:
+        if r[0] and r[0].strip().lower() == clean:
+            if r[1] in (None, ""):
+                return 0
+            try:
+                return int(float(r[1]))
+            except (TypeError, ValueError):
+                return 0
+    return 0
 
 
 def get_bouquets_stats(date_from, date_to):
-    """Статистика букетов за период: собрано, продано, прибыль."""
+    """Статистика за период — из analytics."""
     with _connect() as con:
         cur = con.cursor()
         cur.execute("""
             SELECT
-                COALESCE(SUM(initial_count), 0),
-                COALESCE(SUM(CASE WHEN sold = 1 THEN initial_count ELSE 0 END), 0)
-            FROM bouquets
+                COALESCE(SUM(bouquets), 0),
+                COALESCE(SUM(profit), 0)
+            FROM analytics
             WHERE date BETWEEN ? AND ?
         """, (date_from, date_to))
         row = cur.fetchone()
         collected = row[0] or 0
-        sold_count = row[1] or 0
-
-        cur.execute("""
-            SELECT COALESCE(SUM(CAST(total AS REAL) * initial_count), 0)
-            FROM bouquets
-            WHERE date BETWEEN ? AND ? AND sold = 1
-        """, (date_from, date_to))
-        profit = int(cur.fetchone()[0] or 0)
+        profit = row[1] or 0
 
     return {
         "collected": collected,
-        "sold":      sold_count,
+        "sold":      collected,
         "profit":    profit,
     }
 
@@ -407,13 +415,13 @@ def get_spisano_stats(date_from, date_to):
 
 
 def get_profit_by_day(date_from, date_to):
-    """Возвращает словарь {date: profit} для графика (по букетам)."""
+    """{date: profit} для графика."""
     with _connect() as con:
         cur = con.cursor()
         cur.execute("""
-            SELECT date, COALESCE(SUM(CAST(total AS REAL) * initial_count), 0)
-            FROM bouquets
-            WHERE date BETWEEN ? AND ? AND sold = 1
+            SELECT date, COALESCE(SUM(profit), 0)
+            FROM analytics
+            WHERE date BETWEEN ? AND ?
             GROUP BY date
             ORDER BY date
         """, (date_from, date_to))
@@ -422,12 +430,7 @@ def get_profit_by_day(date_from, date_to):
 
 
 def get_orders_stats(date_from, date_to):
-    """
-    Статистика заказов за период: продано, прибыль.
-
-    Прибыль: если у заказа есть total — берём его.
-    Если total = 0 — берём стоимость связанного букета.
-    """
+    """Статистика заказов за период."""
     with _connect() as con:
         cur = con.cursor()
 
@@ -450,23 +453,23 @@ def get_orders_stats(date_from, date_to):
         """, (date_from, date_to))
         rows = cur.fetchall()
 
+        cur.execute("SELECT name, total FROM bouquets ORDER BY id DESC")
+        all_bouquets = cur.fetchall()
+
         profit_from_bouquets = 0
         for order_id, bouquet in rows:
             if not bouquet:
                 continue
-            cur.execute("""
-                SELECT total FROM bouquets
-                WHERE LOWER(TRIM(name)) = ?
-                ORDER BY id DESC
-                LIMIT 1
-            """, (bouquet.strip().lower(),))
-            b = cur.fetchone()
-            if b is None or b[0] in (None, ""):
-                continue
-            try:
-                profit_from_bouquets += int(float(b[0]))
-            except (TypeError, ValueError):
-                pass
+            clean = bouquet.strip().lower()
+            for name, total in all_bouquets:
+                if name and name.strip().lower() == clean:
+                    if total in (None, ""):
+                        break
+                    try:
+                        profit_from_bouquets += int(float(total))
+                    except (TypeError, ValueError):
+                        pass
+                    break
 
     return {
         "sold":   sold,
@@ -475,7 +478,7 @@ def get_orders_stats(date_from, date_to):
 
 
 def get_orders_profit_by_day(date_from, date_to):
-    """{date: profit} по проданным заказам за период."""
+    """{date: profit} по проданным заказам."""
     with _connect() as con:
         cur = con.cursor()
         cur.execute("""
@@ -490,7 +493,7 @@ def get_orders_profit_by_day(date_from, date_to):
 
 
 def get_orders_sold_by_day(date_from, date_to):
-    """{date: count} по проданным заказам за период."""
+    """{date: count} по проданным заказам."""
     with _connect() as con:
         cur = con.cursor()
         cur.execute("""
@@ -504,59 +507,74 @@ def get_orders_sold_by_day(date_from, date_to):
     return {r[0]: int(r[1] or 0) for r in rows}
 
 
-def sell_bouquet_by_name(name):
-    """
-    Уменьшает count на 1 у первого не проданного букета с таким названием.
-    Сравнение без учёта регистра.
-    Если count станет 0 — помечает букет как проданный.
-    initial_count НЕ трогает.
-    Возвращает True, если удалось.
-    """
+def sell_bouquet_by_name(name, count_sold=1):
+    """Продажа букета. Пишет прибыль в аналитику."""
     if not name:
         return False
     clean = name.strip().lower()
     with _connect() as con:
         cur = con.cursor()
         cur.execute("""
-            SELECT id, count FROM bouquets
-            WHERE LOWER(TRIM(name)) = ? AND sold = 0
+            SELECT id, name, count, total, date FROM bouquets
+            WHERE sold = 0
             ORDER BY id
-            LIMIT 1
-        """, (clean,))
-        row = cur.fetchone()
-        if row is None:
+        """)
+        rows = cur.fetchall()
+
+        target_id = None
+        target_count = None
+        target_total = 0
+        target_date = ""
+        for r in rows:
+            if r[1] and r[1].strip().lower() == clean:
+                target_id = r[0]
+                target_count = r[2]
+                target_total = r[3] or 0
+                target_date = r[4] or ""
+                break
+
+        if target_id is None:
             return False
 
-        bouquet_id, cnt = row
-        cnt = (cnt or 1) - 1
+        cnt = (target_count or 1) - count_sold
 
         if cnt <= 0:
             cur.execute(
                 "UPDATE bouquets SET count = 0, sold = 1 WHERE id = ?",
-                (bouquet_id,)
+                (target_id,)
             )
         else:
             cur.execute(
                 "UPDATE bouquets SET count = ? WHERE id = ?",
-                (cnt, bouquet_id)
+                (cnt, target_id)
             )
         con.commit()
-        return True
+
+    try:
+        try:
+            profit_per_item = int(float(target_total))
+        except (TypeError, ValueError):
+            profit_per_item = 0
+        add_analytics(
+            target_date,
+            bouquets=0,
+            profit=profit_per_item * count_sold,
+            spisano=0,
+        )
+    except Exception:
+        pass
+
+    return True
 
 
 def mark_order_ready_by_name(name):
-    """
-    Устаревшая функция — оставлена для совместимости.
-    Проксирует на sync_orders_by_bouquet_name.
-    """
+    """Устаревшая функция."""
     return sync_orders_by_bouquet_name(name) > 0
 
 
-# ─── СИНХРОНИЗАЦИЯ ЗАКАЗОВ И БУКЕТОВ ───────────────────────
+# СИНХРОНИЗАЦИЯ
 def sync_orders_by_bouquet_name(name):
-    """
-    Обновляет статусы заказов с таким названием букета по состоянию букетов.
-    """
+    """Обновляет статусы заказов по состоянию букетов."""
     if not name:
         return 0
 
@@ -565,16 +583,22 @@ def sync_orders_by_bouquet_name(name):
     with _connect() as con:
         cur = con.cursor()
 
-        cur.execute("""
-            SELECT
-                COALESCE(SUM(CASE WHEN sold = 0 THEN 1 ELSE 0 END), 0),
-                COALESCE(COUNT(*), 0)
-            FROM bouquets
-            WHERE LOWER(TRIM(name)) = ?
-        """, (clean_name,))
-        row = cur.fetchone()
-        unsold = row[0] or 0
-        total = row[1] or 0
+        cur.execute("SELECT name, sold, total FROM bouquets")
+        b_rows = cur.fetchall()
+
+        unsold = 0
+        total = 0
+        last_total = 0
+        for bname, bsold, btotal in b_rows:
+            if bname and bname.strip().lower() == clean_name:
+                total += 1
+                if not bsold:
+                    unsold += 1
+                if btotal not in (None, ""):
+                    try:
+                        last_total = int(float(btotal))
+                    except (TypeError, ValueError):
+                        last_total = 0
 
         if total > 0 and unsold == 0:
             new_ready = 1
@@ -585,43 +609,47 @@ def sync_orders_by_bouquet_name(name):
         else:
             return 0
 
-        cur.execute("""
-            SELECT total FROM bouquets
-            WHERE LOWER(TRIM(name)) = ?
-            ORDER BY id DESC
-            LIMIT 1
-        """, (clean_name,))
-        t_row = cur.fetchone()
-        total_value = 0
-        if t_row is not None and t_row[0] not in (None, ""):
-            try:
-                total_value = int(float(t_row[0]))
-            except (TypeError, ValueError):
-                total_value = 0
+        total_value = last_total
 
-        if new_sold == 1:
-            cur.execute("""
-                UPDATE orders
-                SET ready = 1,
-                    sold = 1,
-                    total = CASE WHEN total = 0 THEN ? ELSE total END
-                WHERE LOWER(TRIM(bouquet)) = ? AND sold = 0
-            """, (total_value, clean_name))
-        else:
-            cur.execute("""
-                UPDATE orders
-                SET ready = 1,
-                    sold = 0,
-                    total = CASE WHEN total = 0 THEN ? ELSE total END
-                WHERE LOWER(TRIM(bouquet)) = ? AND ready = 0 AND sold = 0
-            """, (total_value, clean_name))
+        cur.execute("""
+            SELECT id, bouquet, total, ready, sold FROM orders
+        """)
+        o_rows = cur.fetchall()
+
+        updated = 0
+        for oid, obouquet, ototal, oready, osold in o_rows:
+            if not obouquet:
+                continue
+            if obouquet.strip().lower() != clean_name:
+                continue
+
+            if new_sold == 1:
+                if osold:
+                    continue
+                cur.execute("""
+                    UPDATE orders
+                    SET ready = 1, sold = 1,
+                        total = CASE WHEN total = 0 THEN ? ELSE total END
+                    WHERE id = ?
+                """, (total_value, oid))
+                updated += 1
+            else:
+                if oready or osold:
+                    continue
+                cur.execute("""
+                    UPDATE orders
+                    SET ready = 1, sold = 0,
+                        total = CASE WHEN total = 0 THEN ? ELSE total END
+                    WHERE id = ?
+                """, (total_value, oid))
+                updated += 1
 
         con.commit()
-        return cur.rowcount
+        return updated
 
 
 def sync_all_orders():
-    """Синхронизирует статусы всех заказов по их букетам."""
+    """Синхронизирует статусы всех заказов."""
     with _connect() as con:
         cur = con.cursor()
         cur.execute("SELECT DISTINCT bouquet FROM orders")
@@ -633,7 +661,6 @@ def sync_all_orders():
     return total
 
 
-# ─── ДОСЧЁТ СТОИМОСТИ ЗАКАЗОВ ──────────────────────────────
 def fix_orders_total():
     """Проставляет total всем заказам, у которых total = 0."""
     with _connect() as con:
@@ -645,37 +672,35 @@ def fix_orders_total():
         """)
         rows = cur.fetchall()
 
+        cur.execute("SELECT name, total FROM bouquets ORDER BY id DESC")
+        all_bouquets = cur.fetchall()
+
         updated = 0
         for order_id, bouquet in rows:
             if not bouquet:
                 continue
-
-            cur.execute("""
-                SELECT total FROM bouquets
-                WHERE LOWER(TRIM(name)) = ?
-                ORDER BY id DESC
-                LIMIT 1
-            """, (bouquet.strip().lower(),))
-            b = cur.fetchone()
-            if b is None or b[0] in (None, ""):
-                continue
-
-            try:
-                value = int(float(b[0]))
-            except (TypeError, ValueError):
-                continue
-
-            cur.execute(
-                "UPDATE orders SET total = ? WHERE id = ?",
-                (value, order_id)
-            )
-            updated += 1
+            clean = bouquet.strip().lower()
+            for bname, btotal in all_bouquets:
+                if not bname or bname.strip().lower() != clean:
+                    continue
+                if btotal in (None, ""):
+                    break
+                try:
+                    value = int(float(btotal))
+                except (TypeError, ValueError):
+                    break
+                cur.execute(
+                    "UPDATE orders SET total = ? WHERE id = ?",
+                    (value, order_id)
+                )
+                updated += 1
+                break
 
         con.commit()
         return updated
 
 
-# ─── ЗАКАЗЫ (КАЛЕНДАРЬ) ────────────────────────────────────
+# ЗАКАЗЫ 
 def get_orders_by_date(date_str):
     with _connect() as con:
         cur = con.cursor()
@@ -730,10 +755,7 @@ def delete_order(order_id):
 
 
 def toggle_order_status(order_id):
-    """
-    Переключает статус заказа по кругу:
-    В сборке → Готов → Продан → В сборке.
-    """
+    """Переключает статус заказа по кругу."""
     with _connect() as con:
         cur = con.cursor()
         cur.execute(
@@ -765,7 +787,7 @@ def toggle_order_status(order_id):
 
 
 def set_order_sold(order_id):
-    """Помечает заказ как «Продан» (ready=1, sold=1)."""
+    """Помечает заказ как «Продан»."""
     with _connect() as con:
         cur = con.cursor()
         cur.execute("""
@@ -776,7 +798,7 @@ def set_order_sold(order_id):
         con.commit()
 
 
-# ─── СПИСАНИЯ ──────────────────────────────────────────────
+# СПИСАНИЯ 
 def get_spisaniya(date_from, date_to):
     with _connect() as con:
         cur = con.cursor()
@@ -788,7 +810,6 @@ def get_spisaniya(date_from, date_to):
         """, (date_from, date_to))
         rows = cur.fetchall()
 
-        # забираем цены цветов один раз
         cur.execute("SELECT name, price FROM flowers")
         prices = {r[0]: r[1] for r in cur.fetchall()}
 
@@ -811,6 +832,7 @@ def get_spisaniya(date_from, date_to):
 
 
 def add_spisanie(date_str, flower, count, reason):
+    """Добавляет списание + пишет в аналитику."""
     with _connect() as con:
         cur = con.cursor()
         cur.execute("""
@@ -819,8 +841,13 @@ def add_spisanie(date_str, flower, count, reason):
         """, (date_str, flower, count, reason))
         con.commit()
 
+    try:
+        add_analytics(date_str, bouquets=0, profit=0, spisano=count)
+    except Exception:
+        pass
 
-# ─── АНАЛИТИКА ─────────────────────────────────────────────
+
+# АНАЛИТИКА 
 def get_analytics(date_from, date_to):
     with _connect() as con:
         cur = con.cursor()
@@ -854,7 +881,7 @@ def add_analytics(date_str, bouquets=0, profit=0, spisano=0):
         con.commit()
 
 
-# ─── ЦВЕТЫ ─────────────────────────────────────────────────
+#ЦВЕТЫ
 def get_flowers():
     with _connect() as con:
         cur = con.cursor()
@@ -890,7 +917,7 @@ def update_flower_price(name, new_price):
         con.commit()
 
 
-# ─── УПАКОВКИ ──────────────────────────────────────────────
+# УПАКОВКИ 
 def get_packs():
     with _connect() as con:
         cur = con.cursor()

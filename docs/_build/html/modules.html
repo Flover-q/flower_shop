@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+
+<html lang="ru" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>flower_shop &#8212; документация Флора-учёт 1.0</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=d1102ebc" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=12dfc556" />
+    <script src="_static/documentation_options.js?v=9ca2116e"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/translations.js?v=9bfe3ffa"></script>
+    <link rel="index" title="Алфавитный указатель" href="genindex.html" />
+    <link rel="search" title="Поиск" href="search.html" />
+    <link rel="next" title="db module" href="db.html" />
+    <link rel="prev" title="Флора-учёт — документация" href="index.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="flower-shop">
+<h1>flower_shop<a class="headerlink" href="#flower-shop" title="Ссылка на этот заголовок">¶</a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="db.html">db module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="db.html#db.add_analytics"><code class="docutils literal notranslate"><span class="pre">add_analytics()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="db.html#db.add_bouquet"><code class="docutils literal notranslate"><span class="pre">add_bouquet()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="db.html#db.add_client"><code class="docutils literal notranslate"><span class="pre">add_client()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="db.html#db.add_flower"><code class="docutils literal notranslate"><span class="pre">add_flower()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="db.html#db.add_order"><code class="docutils literal notranslate"><span class="pre">add_order()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="db.html#db.add_pack"><code class="docutils literal notranslate"><span class="pre">add_pack()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="db.html#db.add_spisanie"><code class="docutils literal notranslate"><span class="pre">add_spisanie()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="db.html#db.count_bouquets_total"><code class="docutils literal notranslate"><span class="pre">count_bouquets_total()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="db.html#db.count_unsold_bouquets"><code class="docutils literal notranslate"><span class="pre">count_unsold_bouquets()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="db.html#db.count_unsold_by_name"><code class="docutils literal notranslate"><span class="pre">count_unsold_by_name()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="db.html#db.delete_bouquet_by_id"><code class="docutils literal notranslate"><span class="pre">delete_bouquet_by_id()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="db.html#db.delete_bouquet_by_name"><code class="docutils literal notranslate"><span class="pre">delete_bouquet_by_name()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="db.html#db.delete_client"><code class="docutils literal notranslate"><span class="pre">delete_client()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="db.html#db.delete_flower"><code class="docutils literal notranslate"><span class="pre">delete_flower()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="db.html#db.delete_order"><code class="docutils literal notranslate"><span class="pre">delete_order()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="db.html#db.delete_pack"><code class="docutils literal notranslate"><span class="pre">delete_pack()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="db.html#db.fix_orders_total"><code class="docutils literal notranslate"><span class="pre">fix_orders_total()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="db.html#db.get_analytics"><code class="docutils literal notranslate"><span class="pre">get_analytics()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="db.html#db.get_bouquet_total_by_name"><code class="docutils literal notranslate"><span class="pre">get_bouquet_total_by_name()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="db.html#db.get_bouquets"><code class="docutils literal notranslate"><span class="pre">get_bouquets()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="db.html#db.get_bouquets_stats"><code class="docutils literal notranslate"><span class="pre">get_bouquets_stats()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="db.html#db.get_clients"><code class="docutils literal notranslate"><span class="pre">get_clients()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="db.html#db.get_flowers"><code class="docutils literal notranslate"><span class="pre">get_flowers()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="db.html#db.get_orders_all"><code class="docutils literal notranslate"><span class="pre">get_orders_all()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="db.html#db.get_orders_by_date"><code class="docutils literal notranslate"><span class="pre">get_orders_by_date()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="db.html#db.get_orders_profit_by_day"><code class="docutils literal notranslate"><span class="pre">get_orders_profit_by_day()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="db.html#db.get_orders_sold_by_day"><code class="docutils literal notranslate"><span class="pre">get_orders_sold_by_day()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="db.html#db.get_orders_stats"><code class="docutils literal notranslate"><span class="pre">get_orders_stats()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="db.html#db.get_pack_names"><code class="docutils literal notranslate"><span class="pre">get_pack_names()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="db.html#db.get_pack_sizes"><code class="docutils literal notranslate"><span class="pre">get_pack_sizes()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="db.html#db.get_packs"><code class="docutils literal notranslate"><span class="pre">get_packs()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="db.html#db.get_profit_by_day"><code class="docutils literal notranslate"><span class="pre">get_profit_by_day()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="db.html#db.get_spisaniya"><code class="docutils literal notranslate"><span class="pre">get_spisaniya()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="db.html#db.get_spisano_stats"><code class="docutils literal notranslate"><span class="pre">get_spisano_stats()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="db.html#db.init_db"><code class="docutils literal notranslate"><span class="pre">init_db()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="db.html#db.mark_order_ready_by_name"><code class="docutils literal notranslate"><span class="pre">mark_order_ready_by_name()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="db.html#db.sell_bouquet_by_name"><code class="docutils literal notranslate"><span class="pre">sell_bouquet_by_name()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="db.html#db.set_order_sold"><code class="docutils literal notranslate"><span class="pre">set_order_sold()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="db.html#db.sync_all_orders"><code class="docutils literal notranslate"><span class="pre">sync_all_orders()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="db.html#db.sync_orders_by_bouquet_name"><code class="docutils literal notranslate"><span class="pre">sync_orders_by_bouquet_name()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="db.html#db.toggle_bouquet_sold"><code class="docutils literal notranslate"><span class="pre">toggle_bouquet_sold()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="db.html#db.toggle_order_status"><code class="docutils literal notranslate"><span class="pre">toggle_order_status()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="db.html#db.update_bouquet_count"><code class="docutils literal notranslate"><span class="pre">update_bouquet_count()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="db.html#db.update_bouquet_initial_count"><code class="docutils literal notranslate"><span class="pre">update_bouquet_initial_count()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="db.html#db.update_flower_price"><code class="docutils literal notranslate"><span class="pre">update_flower_price()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="db.html#db.update_pack_price"><code class="docutils literal notranslate"><span class="pre">update_pack_price()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="main.html">main module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="main.html#main.load_fonts"><code class="docutils literal notranslate"><span class="pre">load_fonts()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="main.html#main.main"><code class="docutils literal notranslate"><span class="pre">main()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="tests.html">tests package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="tests.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tests.html#module-tests.test_db">tests.test_db module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="tests.html#tests.test_db.test_add_and_get_bouquet"><code class="docutils literal notranslate"><span class="pre">test_add_and_get_bouquet()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="tests.html#tests.test_db.test_add_and_get_client"><code class="docutils literal notranslate"><span class="pre">test_add_and_get_client()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="tests.html#tests.test_db.test_add_and_get_flower"><code class="docutils literal notranslate"><span class="pre">test_add_and_get_flower()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="tests.html#tests.test_db.test_add_and_get_order"><code class="docutils literal notranslate"><span class="pre">test_add_and_get_order()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="tests.html#tests.test_db.test_add_and_get_pack"><code class="docutils literal notranslate"><span class="pre">test_add_and_get_pack()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="tests.html#tests.test_db.test_add_and_get_spisanie"><code class="docutils literal notranslate"><span class="pre">test_add_and_get_spisanie()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="tests.html#tests.test_db.test_count_bouquets_total"><code class="docutils literal notranslate"><span class="pre">test_count_bouquets_total()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="tests.html#tests.test_db.test_count_unsold_bouquets"><code class="docutils literal notranslate"><span class="pre">test_count_unsold_bouquets()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="tests.html#tests.test_db.test_count_unsold_by_name"><code class="docutils literal notranslate"><span class="pre">test_count_unsold_by_name()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="tests.html#tests.test_db.test_delete_order"><code class="docutils literal notranslate"><span class="pre">test_delete_order()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="tests.html#tests.test_db.test_delete_pack"><code class="docutils literal notranslate"><span class="pre">test_delete_pack()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="tests.html#tests.test_db.test_get_analytics"><code class="docutils literal notranslate"><span class="pre">test_get_analytics()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="tests.html#tests.test_db.test_get_bouquet_total_by_name"><code class="docutils literal notranslate"><span class="pre">test_get_bouquet_total_by_name()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="tests.html#tests.test_db.test_get_bouquets_stats"><code class="docutils literal notranslate"><span class="pre">test_get_bouquets_stats()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="tests.html#tests.test_db.test_get_orders_all"><code class="docutils literal notranslate"><span class="pre">test_get_orders_all()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="tests.html#tests.test_db.test_get_pack_names_and_sizes"><code class="docutils literal notranslate"><span class="pre">test_get_pack_names_and_sizes()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="tests.html#tests.test_db.test_get_profit_by_day"><code class="docutils literal notranslate"><span class="pre">test_get_profit_by_day()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="tests.html#tests.test_db.test_get_spisano_stats"><code class="docutils literal notranslate"><span class="pre">test_get_spisano_stats()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="tests.html#tests.test_db.test_init_db"><code class="docutils literal notranslate"><span class="pre">test_init_db()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="tests.html#tests.test_db.test_sell_bouquet_by_name"><code class="docutils literal notranslate"><span class="pre">test_sell_bouquet_by_name()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="tests.html#tests.test_db.test_set_order_sold"><code class="docutils literal notranslate"><span class="pre">test_set_order_sold()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="tests.html#tests.test_db.test_toggle_bouquet_sold"><code class="docutils literal notranslate"><span class="pre">test_toggle_bouquet_sold()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="tests.html#tests.test_db.test_toggle_order_status"><code class="docutils literal notranslate"><span class="pre">test_toggle_order_status()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="tests.html#tests.test_db.test_update_bouquet_count"><code class="docutils literal notranslate"><span class="pre">test_update_bouquet_count()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="tests.html#tests.test_db.test_update_bouquet_initial_count"><code class="docutils literal notranslate"><span class="pre">test_update_bouquet_initial_count()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="tests.html#tests.test_db.test_update_flower_price"><code class="docutils literal notranslate"><span class="pre">test_update_flower_price()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="tests.html#tests.test_db.test_update_pack_price"><code class="docutils literal notranslate"><span class="pre">test_update_pack_price()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="tests.html#module-tests">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="windows.html">windows package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="windows.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="windows.pages.html">windows.pages package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="windows.pages.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="windows.pages.html#module-windows.pages.analytics">windows.pages.analytics module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="windows.pages.html#module-windows.pages.bouquet">windows.pages.bouquet module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="windows.pages.html#module-windows.pages.calendar">windows.pages.calendar module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="windows.pages.html#module-windows.pages.clients">windows.pages.clients module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="windows.pages.html#module-windows.pages.flowers_edit">windows.pages.flowers_edit module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="windows.pages.html#module-windows.pages.graph">windows.pages.graph module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="windows.pages.html#module-windows.pages.main_menu">windows.pages.main_menu module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="windows.pages.html#module-windows.pages.main_window">windows.pages.main_window module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="windows.pages.html#module-windows.pages.my_bouquets">windows.pages.my_bouquets module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="windows.pages.html#module-windows.pages.report">windows.pages.report module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="windows.pages.html#module-windows.pages.spisanie">windows.pages.spisanie module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="windows.pages.html#module-windows.pages">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="windows.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="windows.html#module-windows.app_window">windows.app_window module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="windows.html#windows.app_window.AppWindow"><code class="docutils literal notranslate"><span class="pre">AppWindow</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="windows.html#windows.app_window.AppWindow.add_page"><code class="docutils literal notranslate"><span class="pre">AppWindow.add_page()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="windows.html#windows.app_window.AppWindow.go_to"><code class="docutils literal notranslate"><span class="pre">AppWindow.go_to()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="windows.html#windows.app_window.AppWindow.set_subtitle"><code class="docutils literal notranslate"><span class="pre">AppWindow.set_subtitle()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="windows.html#module-windows.dialogs">windows.dialogs module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="windows.html#windows.dialogs.confirm"><code class="docutils literal notranslate"><span class="pre">confirm()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="windows.html#windows.dialogs.get_item"><code class="docutils literal notranslate"><span class="pre">get_item()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="windows.html#windows.dialogs.get_text"><code class="docutils literal notranslate"><span class="pre">get_text()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="windows.html#windows.dialogs.info"><code class="docutils literal notranslate"><span class="pre">info()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="windows.html#windows.dialogs.warn"><code class="docutils literal notranslate"><span class="pre">warn()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="windows.html#module-windows.green_calendar">windows.green_calendar module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="windows.html#windows.green_calendar.GreenCalendar"><code class="docutils literal notranslate"><span class="pre">GreenCalendar</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="windows.html#module-windows">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">Флора-учёт</a></h1>
+
+
+
+
+
+
+
+
+<h3>Навигация</h3>
+<p class="caption" role="heading"><span class="caption-text">Содержание:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">flower_shop</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="db.html">db module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="main.html">main module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tests.html">tests package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="windows.html">windows package</a></li>
+</ul>
+</li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="index.html" title="предыдущая глава">Флора-учёт — документация</a></li>
+      <li>Next: <a href="db.html" title="следующая глава">db module</a></li>
+  </ul></li>
+</ul>
+</div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Быстрый поиск</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Искать" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2026, Ламанова А.А..
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 7.4.7</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 0.7.16</a>
+      
+      |
+      <a href="_sources/modules.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

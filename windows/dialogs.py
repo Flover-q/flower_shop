@@ -21,7 +21,7 @@ COLOR_SHADOW  = "#D0DDD5"
 
 
 class _BaseDialog(QDialog):
-    """Базовая карточка-диалог в стиле «Флора-учёт»."""
+    """карточка-диалог."""
 
     def __init__(self, parent, title, text, buttons):
         super().__init__(parent)

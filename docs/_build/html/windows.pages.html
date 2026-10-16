@@ -1,0 +1,1496 @@
+<!DOCTYPE html>
+
+<html lang="ru" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>windows.pages package &#8212; документация Флора-учёт 1.0</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=d1102ebc" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=12dfc556" />
+    <script src="_static/documentation_options.js?v=9ca2116e"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/translations.js?v=9bfe3ffa"></script>
+    <link rel="index" title="Алфавитный указатель" href="genindex.html" />
+    <link rel="search" title="Поиск" href="search.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="windows-pages-package">
+<h1>windows.pages package<a class="headerlink" href="#windows-pages-package" title="Ссылка на этот заголовок">¶</a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Ссылка на этот заголовок">¶</a></h2>
+</section>
+<section id="module-windows.pages.analytics">
+<span id="windows-pages-analytics-module"></span><h2>windows.pages.analytics module<a class="headerlink" href="#module-windows.pages.analytics" title="Ссылка на этот заголовок">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="windows.pages.analytics.AnalyticsPage">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">windows.pages.analytics.</span></span><span class="sig-name descname"><span class="pre">AnalyticsPage</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">app</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.analytics.AnalyticsPage" title="Link to this definition">¶</a></dt>
+<dd><p>Базовые классы: <code class="xref py py-class docutils literal notranslate"><span class="pre">QWidget</span></code></p>
+<p>Окно «Аналитика».</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.analytics.AnalyticsPage.add_shadow">
+<span class="sig-name descname"><span class="pre">add_shadow</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">widget</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.analytics.AnalyticsPage.add_shadow" title="Link to this definition">¶</a></dt>
+<dd><p>Добавляет тень под элементом.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.analytics.AnalyticsPage.apply_button_styles">
+<span class="sig-name descname"><span class="pre">apply_button_styles</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.analytics.AnalyticsPage.apply_button_styles" title="Link to this definition">¶</a></dt>
+<dd><p>Активная кнопка — тёмная, остальные — светлые.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.analytics.AnalyticsPage.create_bottom_bar">
+<span class="sig-name descname"><span class="pre">create_bottom_bar</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.analytics.AnalyticsPage.create_bottom_bar" title="Link to this definition">¶</a></dt>
+<dd><p>Нижняя полоска.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.analytics.AnalyticsPage.create_chart">
+<span class="sig-name descname"><span class="pre">create_chart</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.analytics.AnalyticsPage.create_chart" title="Link to this definition">¶</a></dt>
+<dd><p>Кнопки «Обновить» и «Показать график».</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.analytics.AnalyticsPage.create_exit_button">
+<span class="sig-name descname"><span class="pre">create_exit_button</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.analytics.AnalyticsPage.create_exit_button" title="Link to this definition">¶</a></dt>
+<dd><p>Кнопка «Назад».</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.analytics.AnalyticsPage.create_minimize_button">
+<span class="sig-name descname"><span class="pre">create_minimize_button</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.analytics.AnalyticsPage.create_minimize_button" title="Link to this definition">¶</a></dt>
+<dd><p>Кнопка «Свернуть».</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.analytics.AnalyticsPage.create_period_buttons">
+<span class="sig-name descname"><span class="pre">create_period_buttons</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.analytics.AnalyticsPage.create_period_buttons" title="Link to this definition">¶</a></dt>
+<dd><p>Три кнопки: За сегодня / За текущую неделю / За текущий год.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.analytics.AnalyticsPage.create_period_label">
+<span class="sig-name descname"><span class="pre">create_period_label</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.analytics.AnalyticsPage.create_period_label" title="Link to this definition">¶</a></dt>
+<dd><p>Крупная подпись над статистикой.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.analytics.AnalyticsPage.create_side_bars">
+<span class="sig-name descname"><span class="pre">create_side_bars</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.analytics.AnalyticsPage.create_side_bars" title="Link to this definition">¶</a></dt>
+<dd><p>Боковые полоски.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.analytics.AnalyticsPage.create_stats_rows">
+<span class="sig-name descname"><span class="pre">create_stats_rows</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.analytics.AnalyticsPage.create_stats_rows" title="Link to this definition">¶</a></dt>
+<dd><p>Пять строк статистики: слева подпись, справа цифра + сравнение.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.analytics.AnalyticsPage.create_title">
+<span class="sig-name descname"><span class="pre">create_title</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.analytics.AnalyticsPage.create_title" title="Link to this definition">¶</a></dt>
+<dd><p>Заголовок «Флора-учёт» и «Аналитика».</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.analytics.AnalyticsPage.create_top_bar">
+<span class="sig-name descname"><span class="pre">create_top_bar</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.analytics.AnalyticsPage.create_top_bar" title="Link to this definition">¶</a></dt>
+<dd><p>Верхняя полоска.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.analytics.AnalyticsPage.go_back">
+<span class="sig-name descname"><span class="pre">go_back</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.analytics.AnalyticsPage.go_back" title="Link to this definition">¶</a></dt>
+<dd><p>Возврат на главное окно с карточками.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.analytics.AnalyticsPage.open_graph">
+<span class="sig-name descname"><span class="pre">open_graph</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.analytics.AnalyticsPage.open_graph" title="Link to this definition">¶</a></dt>
+<dd><p>Открывает страницу с графиком.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.analytics.AnalyticsPage.refresh_stats">
+<span class="sig-name descname"><span class="pre">refresh_stats</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.analytics.AnalyticsPage.refresh_stats" title="Link to this definition">¶</a></dt>
+<dd><p>Обновляет статистику: сначала досчитывает total, потом пересчитывает.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.analytics.AnalyticsPage.set_period">
+<span class="sig-name descname"><span class="pre">set_period</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">period</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.analytics.AnalyticsPage.set_period" title="Link to this definition">¶</a></dt>
+<dd><p>Переключение периода: day / week / year.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.analytics.AnalyticsPage.showEvent">
+<span class="sig-name descname"><span class="pre">showEvent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.analytics.AnalyticsPage.showEvent" title="Link to this definition">¶</a></dt>
+<dd><p>При показе окна НЕ пересчитываем —
+обновление только по кнопке «Обновить».</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.analytics.AnalyticsPage.showMinimized">
+<span class="sig-name descname"><span class="pre">showMinimized</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.analytics.AnalyticsPage.showMinimized" title="Link to this definition">¶</a></dt>
+<dd><p>Свернуть окно приложения.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.analytics.AnalyticsPage.update_stats">
+<span class="sig-name descname"><span class="pre">update_stats</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.analytics.AnalyticsPage.update_stats" title="Link to this definition">¶</a></dt>
+<dd><p>Считает все цифры и сравнения.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-windows.pages.bouquet">
+<span id="windows-pages-bouquet-module"></span><h2>windows.pages.bouquet module<a class="headerlink" href="#module-windows.pages.bouquet" title="Ссылка на этот заголовок">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="windows.pages.bouquet.BouquetPage">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">windows.pages.bouquet.</span></span><span class="sig-name descname"><span class="pre">BouquetPage</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">app</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.bouquet.BouquetPage" title="Link to this definition">¶</a></dt>
+<dd><p>Базовые классы: <code class="xref py py-class docutils literal notranslate"><span class="pre">QWidget</span></code></p>
+<p>Окно «Собрать букет».</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="windows.pages.bouquet.BouquetPage.SIZES">
+<span class="sig-name descname"><span class="pre">SIZES</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['Маленький',</span> <span class="pre">'Средний',</span> <span class="pre">'Большой']</span></em><a class="headerlink" href="#windows.pages.bouquet.BouquetPage.SIZES" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.bouquet.BouquetPage.add_count">
+<span class="sig-name descname"><span class="pre">add_count</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.bouquet.BouquetPage.add_count" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.bouquet.BouquetPage.add_pack_to_list">
+<span class="sig-name descname"><span class="pre">add_pack_to_list</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.bouquet.BouquetPage.add_pack_to_list" title="Link to this definition">¶</a></dt>
+<dd><p>Добавляет пару «упаковка / размер» в список справа.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.bouquet.BouquetPage.add_shadow">
+<span class="sig-name descname"><span class="pre">add_shadow</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">widget</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.bouquet.BouquetPage.add_shadow" title="Link to this definition">¶</a></dt>
+<dd><p>Псевдотень: серая плашка под элементом.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.bouquet.BouquetPage.calculate">
+<span class="sig-name descname"><span class="pre">calculate</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.bouquet.BouquetPage.calculate" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.bouquet.BouquetPage.create_bottom_bar">
+<span class="sig-name descname"><span class="pre">create_bottom_bar</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.bouquet.BouquetPage.create_bottom_bar" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.bouquet.BouquetPage.create_buttons">
+<span class="sig-name descname"><span class="pre">create_buttons</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.bouquet.BouquetPage.create_buttons" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.bouquet.BouquetPage.create_exit_button">
+<span class="sig-name descname"><span class="pre">create_exit_button</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.bouquet.BouquetPage.create_exit_button" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.bouquet.BouquetPage.create_fields">
+<span class="sig-name descname"><span class="pre">create_fields</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.bouquet.BouquetPage.create_fields" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.bouquet.BouquetPage.create_minimize_button">
+<span class="sig-name descname"><span class="pre">create_minimize_button</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.bouquet.BouquetPage.create_minimize_button" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.bouquet.BouquetPage.create_side_bars">
+<span class="sig-name descname"><span class="pre">create_side_bars</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.bouquet.BouquetPage.create_side_bars" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.bouquet.BouquetPage.create_title">
+<span class="sig-name descname"><span class="pre">create_title</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.bouquet.BouquetPage.create_title" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.bouquet.BouquetPage.create_top_bar">
+<span class="sig-name descname"><span class="pre">create_top_bar</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.bouquet.BouquetPage.create_top_bar" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.bouquet.BouquetPage.del_count">
+<span class="sig-name descname"><span class="pre">del_count</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.bouquet.BouquetPage.del_count" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.bouquet.BouquetPage.del_pack_from_list">
+<span class="sig-name descname"><span class="pre">del_pack_from_list</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.bouquet.BouquetPage.del_pack_from_list" title="Link to this definition">¶</a></dt>
+<dd><p>Удаляет выбранную строку из списка упаковок.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.bouquet.BouquetPage.go_back">
+<span class="sig-name descname"><span class="pre">go_back</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.bouquet.BouquetPage.go_back" title="Link to this definition">¶</a></dt>
+<dd><p>Возврат на главное окно с карточками.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.bouquet.BouquetPage.reset">
+<span class="sig-name descname"><span class="pre">reset</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.bouquet.BouquetPage.reset" title="Link to this definition">¶</a></dt>
+<dd><p>Сбрасывает окно и перезагружает справочники из БД.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.bouquet.BouquetPage.save_bouquet">
+<span class="sig-name descname"><span class="pre">save_bouquet</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.bouquet.BouquetPage.save_bouquet" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.bouquet.BouquetPage.showEvent">
+<span class="sig-name descname"><span class="pre">showEvent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.bouquet.BouquetPage.showEvent" title="Link to this definition">¶</a></dt>
+<dd><p>При показе окна обновляем упаковки.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.bouquet.BouquetPage.showMinimized">
+<span class="sig-name descname"><span class="pre">showMinimized</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.bouquet.BouquetPage.showMinimized" title="Link to this definition">¶</a></dt>
+<dd><p>Свернуть окно приложения.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.bouquet.BouquetPage.update_count_flowers">
+<span class="sig-name descname"><span class="pre">update_count_flowers</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">checked</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.bouquet.BouquetPage.update_count_flowers" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.bouquet.BouquetPage.update_count_list">
+<span class="sig-name descname"><span class="pre">update_count_list</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.bouquet.BouquetPage.update_count_list" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.bouquet.BouquetPage.update_pack_price">
+<span class="sig-name descname"><span class="pre">update_pack_price</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.bouquet.BouquetPage.update_pack_price" title="Link to this definition">¶</a></dt>
+<dd><p>Пересобирает список размеров с ценами для выбранной упаковки.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="windows.pages.bouquet.CheckableButton">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">windows.pages.bouquet.</span></span><span class="sig-name descname"><span class="pre">CheckableButton</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">prices</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.bouquet.CheckableButton" title="Link to this definition">¶</a></dt>
+<dd><p>Базовые классы: <code class="xref py py-class docutils literal notranslate"><span class="pre">QPushButton</span></code></p>
+<p>Кнопка с выпадающим меню из чекбоксов с ценами и скроллом.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.bouquet.CheckableButton.get_flowers">
+<span class="sig-name descname"><span class="pre">get_flowers</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.bouquet.CheckableButton.get_flowers" title="Link to this definition">¶</a></dt>
+<dd><p>Список отмеченных цветов.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.bouquet.CheckableButton.rebuild">
+<span class="sig-name descname"><span class="pre">rebuild</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">prices</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.bouquet.CheckableButton.rebuild" title="Link to this definition">¶</a></dt>
+<dd><p>Пересобирает чекбоксы под новые цены из БД.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.bouquet.CheckableButton.show_menu_centered">
+<span class="sig-name descname"><span class="pre">show_menu_centered</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.bouquet.CheckableButton.show_menu_centered" title="Link to this definition">¶</a></dt>
+<dd><p>Перечитывает цветы из БД, пересобирает список, показывает меню.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.bouquet.CheckableButton.update_text">
+<span class="sig-name descname"><span class="pre">update_text</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.bouquet.CheckableButton.update_text" title="Link to this definition">¶</a></dt>
+<dd><p>Обновляет текст кнопки по отмеченным чекбоксам.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-windows.pages.calendar">
+<span id="windows-pages-calendar-module"></span><h2>windows.pages.calendar module<a class="headerlink" href="#module-windows.pages.calendar" title="Ссылка на этот заголовок">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="windows.pages.calendar.CalendarPage">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">windows.pages.calendar.</span></span><span class="sig-name descname"><span class="pre">CalendarPage</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">app</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.calendar.CalendarPage" title="Link to this definition">¶</a></dt>
+<dd><p>Базовые классы: <code class="xref py py-class docutils literal notranslate"><span class="pre">QWidget</span></code></p>
+<p>Окно «Календарь заказов».</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="windows.pages.calendar.CalendarPage.MONTHS_RU">
+<span class="sig-name descname"><span class="pre">MONTHS_RU</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['',</span> <span class="pre">'Январь',</span> <span class="pre">'Февраль',</span> <span class="pre">'Март',</span> <span class="pre">'Апрель',</span> <span class="pre">'Май',</span> <span class="pre">'Ию</span> <span class="pre">нь',</span> <span class="pre">'Ию</span> <span class="pre">ль',</span> <span class="pre">'Август',</span> <span class="pre">'Сентябрь',</span> <span class="pre">'Октябрь',</span> <span class="pre">'Ноябрь',</span> <span class="pre">'Декабрь']</span></em><a class="headerlink" href="#windows.pages.calendar.CalendarPage.MONTHS_RU" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="windows.pages.calendar.CalendarPage.MONTHS_RU_GEN">
+<span class="sig-name descname"><span class="pre">MONTHS_RU_GEN</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['',</span> <span class="pre">'января',</span> <span class="pre">'февраля',</span> <span class="pre">'марта',</span> <span class="pre">'апреля',</span> <span class="pre">'мая',</span> <span class="pre">'июня',</span> <span class="pre">'июля',</span> <span class="pre">'августа',</span> <span class="pre">'сентября',</span> <span class="pre">'октября',</span> <span class="pre">'ноября',</span> <span class="pre">'декабря']</span></em><a class="headerlink" href="#windows.pages.calendar.CalendarPage.MONTHS_RU_GEN" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.calendar.CalendarPage.add_order">
+<span class="sig-name descname"><span class="pre">add_order</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.calendar.CalendarPage.add_order" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.calendar.CalendarPage.add_shadow">
+<span class="sig-name descname"><span class="pre">add_shadow</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">widget</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.calendar.CalendarPage.add_shadow" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.calendar.CalendarPage.build_month">
+<span class="sig-name descname"><span class="pre">build_month</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.calendar.CalendarPage.build_month" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.calendar.CalendarPage.create_action_buttons">
+<span class="sig-name descname"><span class="pre">create_action_buttons</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.calendar.CalendarPage.create_action_buttons" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.calendar.CalendarPage.create_bottom_bar">
+<span class="sig-name descname"><span class="pre">create_bottom_bar</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.calendar.CalendarPage.create_bottom_bar" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.calendar.CalendarPage.create_days_grid">
+<span class="sig-name descname"><span class="pre">create_days_grid</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.calendar.CalendarPage.create_days_grid" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.calendar.CalendarPage.create_exit_button">
+<span class="sig-name descname"><span class="pre">create_exit_button</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.calendar.CalendarPage.create_exit_button" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.calendar.CalendarPage.create_minimize_button">
+<span class="sig-name descname"><span class="pre">create_minimize_button</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.calendar.CalendarPage.create_minimize_button" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.calendar.CalendarPage.create_month_header">
+<span class="sig-name descname"><span class="pre">create_month_header</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.calendar.CalendarPage.create_month_header" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.calendar.CalendarPage.create_orders_table">
+<span class="sig-name descname"><span class="pre">create_orders_table</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.calendar.CalendarPage.create_orders_table" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.calendar.CalendarPage.create_selected_label">
+<span class="sig-name descname"><span class="pre">create_selected_label</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.calendar.CalendarPage.create_selected_label" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.calendar.CalendarPage.create_side_bars">
+<span class="sig-name descname"><span class="pre">create_side_bars</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.calendar.CalendarPage.create_side_bars" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.calendar.CalendarPage.create_title">
+<span class="sig-name descname"><span class="pre">create_title</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.calendar.CalendarPage.create_title" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.calendar.CalendarPage.create_top_bar">
+<span class="sig-name descname"><span class="pre">create_top_bar</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.calendar.CalendarPage.create_top_bar" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.calendar.CalendarPage.create_weekdays">
+<span class="sig-name descname"><span class="pre">create_weekdays</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.calendar.CalendarPage.create_weekdays" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.calendar.CalendarPage.delete_order">
+<span class="sig-name descname"><span class="pre">delete_order</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.calendar.CalendarPage.delete_order" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.calendar.CalendarPage.fill_orders_table">
+<span class="sig-name descname"><span class="pre">fill_orders_table</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.calendar.CalendarPage.fill_orders_table" title="Link to this definition">¶</a></dt>
+<dd><p>Заполняет таблицу заказов по дате.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.calendar.CalendarPage.go_back">
+<span class="sig-name descname"><span class="pre">go_back</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.calendar.CalendarPage.go_back" title="Link to this definition">¶</a></dt>
+<dd><p>Возврат на главное окно с карточками.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.calendar.CalendarPage.mark_sold">
+<span class="sig-name descname"><span class="pre">mark_sold</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.calendar.CalendarPage.mark_sold" title="Link to this definition">¶</a></dt>
+<dd><p>Двойной клик по заказу — отметить его как «Продан».
+Работает только для заказов в статусе «Готов».
+Заказы «В сборке» и «Продан» — не трогаем.</p>
+<p>После отметки заказа списывает один букет с таким названием.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.calendar.CalendarPage.next_month">
+<span class="sig-name descname"><span class="pre">next_month</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.calendar.CalendarPage.next_month" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.calendar.CalendarPage.on_day_click">
+<span class="sig-name descname"><span class="pre">on_day_click</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">row</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">col</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.calendar.CalendarPage.on_day_click" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.calendar.CalendarPage.prev_month">
+<span class="sig-name descname"><span class="pre">prev_month</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.calendar.CalendarPage.prev_month" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.calendar.CalendarPage.refresh_day">
+<span class="sig-name descname"><span class="pre">refresh_day</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.calendar.CalendarPage.refresh_day" title="Link to this definition">¶</a></dt>
+<dd><p>Обновляет подсветку дня и таблицу заказов по ключу YYYY-MM-DD.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.calendar.CalendarPage.showEvent">
+<span class="sig-name descname"><span class="pre">showEvent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.calendar.CalendarPage.showEvent" title="Link to this definition">¶</a></dt>
+<dd><p>При показе окна — синхронизируем все заказы с букетами.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.calendar.CalendarPage.showMinimized">
+<span class="sig-name descname"><span class="pre">showMinimized</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.calendar.CalendarPage.showMinimized" title="Link to this definition">¶</a></dt>
+<dd><p>Свернуть окно приложения.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-windows.pages.clients">
+<span id="windows-pages-clients-module"></span><h2>windows.pages.clients module<a class="headerlink" href="#module-windows.pages.clients" title="Ссылка на этот заголовок">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="windows.pages.clients.ClientsPage">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">windows.pages.clients.</span></span><span class="sig-name descname"><span class="pre">ClientsPage</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">app</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.clients.ClientsPage" title="Link to this definition">¶</a></dt>
+<dd><p>Базовые классы: <code class="xref py py-class docutils literal notranslate"><span class="pre">QWidget</span></code></p>
+<p>Окно «Клиенты».</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.clients.ClientsPage.add_client">
+<span class="sig-name descname"><span class="pre">add_client</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.clients.ClientsPage.add_client" title="Link to this definition">¶</a></dt>
+<dd><p>Открывает 3 диалога и добавляет клиента в БД.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.clients.ClientsPage.add_shadow">
+<span class="sig-name descname"><span class="pre">add_shadow</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">widget</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.clients.ClientsPage.add_shadow" title="Link to this definition">¶</a></dt>
+<dd><p>Добавляет тень под элементом.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.clients.ClientsPage.create_action_buttons">
+<span class="sig-name descname"><span class="pre">create_action_buttons</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.clients.ClientsPage.create_action_buttons" title="Link to this definition">¶</a></dt>
+<dd><p>Кнопки «Добавить клиента» и «Удалить клиента».</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.clients.ClientsPage.create_bottom_bar">
+<span class="sig-name descname"><span class="pre">create_bottom_bar</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.clients.ClientsPage.create_bottom_bar" title="Link to this definition">¶</a></dt>
+<dd><p>Нижняя полоска.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.clients.ClientsPage.create_exit_button">
+<span class="sig-name descname"><span class="pre">create_exit_button</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.clients.ClientsPage.create_exit_button" title="Link to this definition">¶</a></dt>
+<dd><p>Кнопка «Назад».</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.clients.ClientsPage.create_minimize_button">
+<span class="sig-name descname"><span class="pre">create_minimize_button</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.clients.ClientsPage.create_minimize_button" title="Link to this definition">¶</a></dt>
+<dd><p>Кнопка «Свернуть».</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.clients.ClientsPage.create_search">
+<span class="sig-name descname"><span class="pre">create_search</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.clients.ClientsPage.create_search" title="Link to this definition">¶</a></dt>
+<dd><p>Поле поиска, полоска под словом «Поиск:» и круглая кнопка-лупа.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.clients.ClientsPage.create_side_bars">
+<span class="sig-name descname"><span class="pre">create_side_bars</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.clients.ClientsPage.create_side_bars" title="Link to this definition">¶</a></dt>
+<dd><p>Боковые полоски.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.clients.ClientsPage.create_table">
+<span class="sig-name descname"><span class="pre">create_table</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.clients.ClientsPage.create_table" title="Link to this definition">¶</a></dt>
+<dd><p>Таблица клиентов.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.clients.ClientsPage.create_title">
+<span class="sig-name descname"><span class="pre">create_title</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.clients.ClientsPage.create_title" title="Link to this definition">¶</a></dt>
+<dd><p>Заголовок «Флора-учёт» и «Клиенты».</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.clients.ClientsPage.create_top_bar">
+<span class="sig-name descname"><span class="pre">create_top_bar</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.clients.ClientsPage.create_top_bar" title="Link to this definition">¶</a></dt>
+<dd><p>Верхняя полоска.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.clients.ClientsPage.delete_client">
+<span class="sig-name descname"><span class="pre">delete_client</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.clients.ClientsPage.delete_client" title="Link to this definition">¶</a></dt>
+<dd><p>Удаляет выбранного в таблице клиента из БД (с подтверждением).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.clients.ClientsPage.fill_table">
+<span class="sig-name descname"><span class="pre">fill_table</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.clients.ClientsPage.fill_table" title="Link to this definition">¶</a></dt>
+<dd><p>Заполняет таблицу переданным списком клиентов.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.clients.ClientsPage.filter_clients">
+<span class="sig-name descname"><span class="pre">filter_clients</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.clients.ClientsPage.filter_clients" title="Link to this definition">¶</a></dt>
+<dd><p>Фильтр по имени или телефону — вызывается только по лупе.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.clients.ClientsPage.go_back">
+<span class="sig-name descname"><span class="pre">go_back</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.clients.ClientsPage.go_back" title="Link to this definition">¶</a></dt>
+<dd><p>Возврат на главное окно с карточками.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.clients.ClientsPage.load_clients">
+<span class="sig-name descname"><span class="pre">load_clients</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.clients.ClientsPage.load_clients" title="Link to this definition">¶</a></dt>
+<dd><p>Заполняет таблицу всеми клиентами из БД.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.clients.ClientsPage.showMinimized">
+<span class="sig-name descname"><span class="pre">showMinimized</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.clients.ClientsPage.showMinimized" title="Link to this definition">¶</a></dt>
+<dd><p>Свернуть окно приложения.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-windows.pages.flowers_edit">
+<span id="windows-pages-flowers-edit-module"></span><h2>windows.pages.flowers_edit module<a class="headerlink" href="#module-windows.pages.flowers_edit" title="Ссылка на этот заголовок">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="windows.pages.flowers_edit.FlowersEditPage">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">windows.pages.flowers_edit.</span></span><span class="sig-name descname"><span class="pre">FlowersEditPage</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">app</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_tab</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'flowers'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.flowers_edit.FlowersEditPage" title="Link to this definition">¶</a></dt>
+<dd><p>Базовые классы: <code class="xref py py-class docutils literal notranslate"><span class="pre">QWidget</span></code></p>
+<p>Окно редактирования справочников: цветы и упаковки.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.flowers_edit.FlowersEditPage.add_entry">
+<span class="sig-name descname"><span class="pre">add_entry</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.flowers_edit.FlowersEditPage.add_entry" title="Link to this definition">¶</a></dt>
+<dd><p>Добавляет цветок или упаковку.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.flowers_edit.FlowersEditPage.add_flower">
+<span class="sig-name descname"><span class="pre">add_flower</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.flowers_edit.FlowersEditPage.add_flower" title="Link to this definition">¶</a></dt>
+<dd><p>Добавляет цветок в БД.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.flowers_edit.FlowersEditPage.add_pack">
+<span class="sig-name descname"><span class="pre">add_pack</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.flowers_edit.FlowersEditPage.add_pack" title="Link to this definition">¶</a></dt>
+<dd><p>Добавляет упаковку — название, размер и цена.</p>
+<p>Название и размер можно выбрать из списка или вписать своё.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.flowers_edit.FlowersEditPage.add_shadow">
+<span class="sig-name descname"><span class="pre">add_shadow</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">widget</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.flowers_edit.FlowersEditPage.add_shadow" title="Link to this definition">¶</a></dt>
+<dd><p>Добавляет тень под элементом.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.flowers_edit.FlowersEditPage.apply_tab_styles">
+<span class="sig-name descname"><span class="pre">apply_tab_styles</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.flowers_edit.FlowersEditPage.apply_tab_styles" title="Link to this definition">¶</a></dt>
+<dd><p>Активная вкладка тёмная, неактивная светлая.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.flowers_edit.FlowersEditPage.create_bottom_bar">
+<span class="sig-name descname"><span class="pre">create_bottom_bar</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.flowers_edit.FlowersEditPage.create_bottom_bar" title="Link to this definition">¶</a></dt>
+<dd><p>Нижняя полоска.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.flowers_edit.FlowersEditPage.create_buttons">
+<span class="sig-name descname"><span class="pre">create_buttons</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.flowers_edit.FlowersEditPage.create_buttons" title="Link to this definition">¶</a></dt>
+<dd><p>Кнопки действий.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.flowers_edit.FlowersEditPage.create_exit_button">
+<span class="sig-name descname"><span class="pre">create_exit_button</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.flowers_edit.FlowersEditPage.create_exit_button" title="Link to this definition">¶</a></dt>
+<dd><p>Кнопка «Назад».</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.flowers_edit.FlowersEditPage.create_minimize_button">
+<span class="sig-name descname"><span class="pre">create_minimize_button</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.flowers_edit.FlowersEditPage.create_minimize_button" title="Link to this definition">¶</a></dt>
+<dd><p>Кнопка «Свернуть».</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.flowers_edit.FlowersEditPage.create_side_bars">
+<span class="sig-name descname"><span class="pre">create_side_bars</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.flowers_edit.FlowersEditPage.create_side_bars" title="Link to this definition">¶</a></dt>
+<dd><p>Боковые полоски.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.flowers_edit.FlowersEditPage.create_table">
+<span class="sig-name descname"><span class="pre">create_table</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.flowers_edit.FlowersEditPage.create_table" title="Link to this definition">¶</a></dt>
+<dd><p>Таблица для отображения справочника.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.flowers_edit.FlowersEditPage.create_tabs">
+<span class="sig-name descname"><span class="pre">create_tabs</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.flowers_edit.FlowersEditPage.create_tabs" title="Link to this definition">¶</a></dt>
+<dd><p>Две кнопки-вкладки — по центру окна.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.flowers_edit.FlowersEditPage.create_title">
+<span class="sig-name descname"><span class="pre">create_title</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.flowers_edit.FlowersEditPage.create_title" title="Link to this definition">¶</a></dt>
+<dd><p>Заголовок «Флора-учёт» и «Справочник».</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.flowers_edit.FlowersEditPage.create_top_bar">
+<span class="sig-name descname"><span class="pre">create_top_bar</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.flowers_edit.FlowersEditPage.create_top_bar" title="Link to this definition">¶</a></dt>
+<dd><p>Верхняя полоска.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.flowers_edit.FlowersEditPage.delete_entry">
+<span class="sig-name descname"><span class="pre">delete_entry</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.flowers_edit.FlowersEditPage.delete_entry" title="Link to this definition">¶</a></dt>
+<dd><p>Удаляет выбранную запись.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.flowers_edit.FlowersEditPage.edit_price">
+<span class="sig-name descname"><span class="pre">edit_price</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.flowers_edit.FlowersEditPage.edit_price" title="Link to this definition">¶</a></dt>
+<dd><p>Меняет цену выбранной записи.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.flowers_edit.FlowersEditPage.go_back">
+<span class="sig-name descname"><span class="pre">go_back</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.flowers_edit.FlowersEditPage.go_back" title="Link to this definition">¶</a></dt>
+<dd><p>Возврат на главное окно с карточками.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.flowers_edit.FlowersEditPage.refresh">
+<span class="sig-name descname"><span class="pre">refresh</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.flowers_edit.FlowersEditPage.refresh" title="Link to this definition">¶</a></dt>
+<dd><p>Перерисовывает таблицу под текущую вкладку.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.flowers_edit.FlowersEditPage.refresh_flowers">
+<span class="sig-name descname"><span class="pre">refresh_flowers</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.flowers_edit.FlowersEditPage.refresh_flowers" title="Link to this definition">¶</a></dt>
+<dd><p>Заполняет таблицу цветами.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.flowers_edit.FlowersEditPage.refresh_packs">
+<span class="sig-name descname"><span class="pre">refresh_packs</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.flowers_edit.FlowersEditPage.refresh_packs" title="Link to this definition">¶</a></dt>
+<dd><p>Заполняет таблицу упаковками.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.flowers_edit.FlowersEditPage.set_tab">
+<span class="sig-name descname"><span class="pre">set_tab</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tab</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.flowers_edit.FlowersEditPage.set_tab" title="Link to this definition">¶</a></dt>
+<dd><p>Переключает вкладку.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.flowers_edit.FlowersEditPage.showMinimized">
+<span class="sig-name descname"><span class="pre">showMinimized</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.flowers_edit.FlowersEditPage.showMinimized" title="Link to this definition">¶</a></dt>
+<dd><p>Свернуть окно приложения.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-windows.pages.graph">
+<span id="windows-pages-graph-module"></span><h2>windows.pages.graph module<a class="headerlink" href="#module-windows.pages.graph" title="Ссылка на этот заголовок">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="windows.pages.graph.BarChart">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">windows.pages.graph.</span></span><span class="sig-name descname"><span class="pre">BarChart</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">color</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'#639A78'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.graph.BarChart" title="Link to this definition">¶</a></dt>
+<dd><p>Базовые классы: <code class="xref py py-class docutils literal notranslate"><span class="pre">QWidget</span></code></p>
+<p>Столбчатый график в стиле программы.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.graph.BarChart.paintEvent">
+<span class="sig-name descname"><span class="pre">paintEvent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">QPaintEvent</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.graph.BarChart.paintEvent" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.graph.BarChart.set_data">
+<span class="sig-name descname"><span class="pre">set_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.graph.BarChart.set_data" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.graph.BarChart.update_width">
+<span class="sig-name descname"><span class="pre">update_width</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.graph.BarChart.update_width" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="windows.pages.graph.GraphPage">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">windows.pages.graph.</span></span><span class="sig-name descname"><span class="pre">GraphPage</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">app</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.graph.GraphPage" title="Link to this definition">¶</a></dt>
+<dd><p>Базовые классы: <code class="xref py py-class docutils literal notranslate"><span class="pre">QWidget</span></code></p>
+<p>Окно «График» — отдельное окно с двумя графиками.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.graph.GraphPage.add_shadow">
+<span class="sig-name descname"><span class="pre">add_shadow</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">widget</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.graph.GraphPage.add_shadow" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.graph.GraphPage.apply_button_styles">
+<span class="sig-name descname"><span class="pre">apply_button_styles</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.graph.GraphPage.apply_button_styles" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.graph.GraphPage.create_bottom_bar">
+<span class="sig-name descname"><span class="pre">create_bottom_bar</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.graph.GraphPage.create_bottom_bar" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.graph.GraphPage.create_charts">
+<span class="sig-name descname"><span class="pre">create_charts</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.graph.GraphPage.create_charts" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.graph.GraphPage.create_exit_button">
+<span class="sig-name descname"><span class="pre">create_exit_button</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.graph.GraphPage.create_exit_button" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.graph.GraphPage.create_minimize_button">
+<span class="sig-name descname"><span class="pre">create_minimize_button</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.graph.GraphPage.create_minimize_button" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.graph.GraphPage.create_period_buttons">
+<span class="sig-name descname"><span class="pre">create_period_buttons</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.graph.GraphPage.create_period_buttons" title="Link to this definition">¶</a></dt>
+<dd><p>Три кнопки + поля + кнопка «Применить».</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.graph.GraphPage.create_side_bars">
+<span class="sig-name descname"><span class="pre">create_side_bars</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.graph.GraphPage.create_side_bars" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.graph.GraphPage.create_title">
+<span class="sig-name descname"><span class="pre">create_title</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.graph.GraphPage.create_title" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.graph.GraphPage.create_top_bar">
+<span class="sig-name descname"><span class="pre">create_top_bar</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.graph.GraphPage.create_top_bar" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.graph.GraphPage.go_back">
+<span class="sig-name descname"><span class="pre">go_back</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.graph.GraphPage.go_back" title="Link to this definition">¶</a></dt>
+<dd><p>Возврат на страницу «Аналитика».</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.graph.GraphPage.on_month_check_changed">
+<span class="sig-name descname"><span class="pre">on_month_check_changed</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.graph.GraphPage.on_month_check_changed" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.graph.GraphPage.on_year_check_changed">
+<span class="sig-name descname"><span class="pre">on_year_check_changed</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.graph.GraphPage.on_year_check_changed" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.graph.GraphPage.set_period">
+<span class="sig-name descname"><span class="pre">set_period</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">period</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.graph.GraphPage.set_period" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.graph.GraphPage.showMinimized">
+<span class="sig-name descname"><span class="pre">showMinimized</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.graph.GraphPage.showMinimized" title="Link to this definition">¶</a></dt>
+<dd><p>Свернуть окно приложения.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.graph.GraphPage.show_months_menu">
+<span class="sig-name descname"><span class="pre">show_months_menu</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.graph.GraphPage.show_months_menu" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.graph.GraphPage.show_period_widgets">
+<span class="sig-name descname"><span class="pre">show_period_widgets</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mode</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.graph.GraphPage.show_period_widgets" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.graph.GraphPage.show_years_menu">
+<span class="sig-name descname"><span class="pre">show_years_menu</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.graph.GraphPage.show_years_menu" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.graph.GraphPage.update_charts">
+<span class="sig-name descname"><span class="pre">update_charts</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.graph.GraphPage.update_charts" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-windows.pages.main_menu">
+<span id="windows-pages-main-menu-module"></span><h2>windows.pages.main_menu module<a class="headerlink" href="#module-windows.pages.main_menu" title="Ссылка на этот заголовок">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="windows.pages.main_menu.MainMenuPage">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">windows.pages.main_menu.</span></span><span class="sig-name descname"><span class="pre">MainMenuPage</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">app</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.main_menu.MainMenuPage" title="Link to this definition">¶</a></dt>
+<dd><p>Базовые классы: <code class="xref py py-class docutils literal notranslate"><span class="pre">QWidget</span></code></p>
+<p>Главное меню с кнопкой «Начать работу».</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.main_menu.MainMenuPage.close_app">
+<span class="sig-name descname"><span class="pre">close_app</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.main_menu.MainMenuPage.close_app" title="Link to this definition">¶</a></dt>
+<dd><p>Закрывает приложение.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.main_menu.MainMenuPage.create_bottom_bar">
+<span class="sig-name descname"><span class="pre">create_bottom_bar</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.main_menu.MainMenuPage.create_bottom_bar" title="Link to this definition">¶</a></dt>
+<dd><p>Нижняя полоска.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.main_menu.MainMenuPage.create_button">
+<span class="sig-name descname"><span class="pre">create_button</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.main_menu.MainMenuPage.create_button" title="Link to this definition">¶</a></dt>
+<dd><p>Создаёт кнопку «Начать работу».</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.main_menu.MainMenuPage.create_exit_button">
+<span class="sig-name descname"><span class="pre">create_exit_button</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.main_menu.MainMenuPage.create_exit_button" title="Link to this definition">¶</a></dt>
+<dd><p>Создаёт кнопку «Выход».</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.main_menu.MainMenuPage.create_minimize_button">
+<span class="sig-name descname"><span class="pre">create_minimize_button</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.main_menu.MainMenuPage.create_minimize_button" title="Link to this definition">¶</a></dt>
+<dd><p>Кнопка «Свернуть».</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.main_menu.MainMenuPage.create_title">
+<span class="sig-name descname"><span class="pre">create_title</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.main_menu.MainMenuPage.create_title" title="Link to this definition">¶</a></dt>
+<dd><p>Создаёт заголовок «Флора-учёт» и подзаголовок.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.main_menu.MainMenuPage.create_top_bar">
+<span class="sig-name descname"><span class="pre">create_top_bar</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.main_menu.MainMenuPage.create_top_bar" title="Link to this definition">¶</a></dt>
+<dd><p>Верхняя полоска.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.main_menu.MainMenuPage.open_main_window">
+<span class="sig-name descname"><span class="pre">open_main_window</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.main_menu.MainMenuPage.open_main_window" title="Link to this definition">¶</a></dt>
+<dd><p>Открывает главное окно с карточками.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.main_menu.MainMenuPage.showMinimized">
+<span class="sig-name descname"><span class="pre">showMinimized</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.main_menu.MainMenuPage.showMinimized" title="Link to this definition">¶</a></dt>
+<dd><p>Свернуть окно приложения.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-windows.pages.main_window">
+<span id="windows-pages-main-window-module"></span><h2>windows.pages.main_window module<a class="headerlink" href="#module-windows.pages.main_window" title="Ссылка на этот заголовок">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="windows.pages.main_window.MainWindowPage">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">windows.pages.main_window.</span></span><span class="sig-name descname"><span class="pre">MainWindowPage</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">app</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.main_window.MainWindowPage" title="Link to this definition">¶</a></dt>
+<dd><p>Базовые классы: <code class="xref py py-class docutils literal notranslate"><span class="pre">QWidget</span></code></p>
+<p>Главное окно с карточками.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.main_window.MainWindowPage.close_app">
+<span class="sig-name descname"><span class="pre">close_app</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.main_window.MainWindowPage.close_app" title="Link to this definition">¶</a></dt>
+<dd><p>Закрывает всю программу.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.main_window.MainWindowPage.create_bottom_bar">
+<span class="sig-name descname"><span class="pre">create_bottom_bar</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.main_window.MainWindowPage.create_bottom_bar" title="Link to this definition">¶</a></dt>
+<dd><p>Нижняя полоска.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.main_window.MainWindowPage.create_card1">
+<span class="sig-name descname"><span class="pre">create_card1</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.main_window.MainWindowPage.create_card1" title="Link to this definition">¶</a></dt>
+<dd><p>Карточка «Собрать букет».</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.main_window.MainWindowPage.create_card2">
+<span class="sig-name descname"><span class="pre">create_card2</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.main_window.MainWindowPage.create_card2" title="Link to this definition">¶</a></dt>
+<dd><p>Карточка «Списание».</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.main_window.MainWindowPage.create_card3">
+<span class="sig-name descname"><span class="pre">create_card3</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.main_window.MainWindowPage.create_card3" title="Link to this definition">¶</a></dt>
+<dd><p>Карточка «Календарь».</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.main_window.MainWindowPage.create_card4">
+<span class="sig-name descname"><span class="pre">create_card4</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.main_window.MainWindowPage.create_card4" title="Link to this definition">¶</a></dt>
+<dd><p>Карточка «Клиенты».</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.main_window.MainWindowPage.create_card5">
+<span class="sig-name descname"><span class="pre">create_card5</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.main_window.MainWindowPage.create_card5" title="Link to this definition">¶</a></dt>
+<dd><p>Карточка «Аналитика».</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.main_window.MainWindowPage.create_card6">
+<span class="sig-name descname"><span class="pre">create_card6</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.main_window.MainWindowPage.create_card6" title="Link to this definition">¶</a></dt>
+<dd><p>Карточка «Мои букеты».</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.main_window.MainWindowPage.create_edit_button">
+<span class="sig-name descname"><span class="pre">create_edit_button</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.main_window.MainWindowPage.create_edit_button" title="Link to this definition">¶</a></dt>
+<dd><p>Маленькая кнопка-шестерёнка слева вверху.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.main_window.MainWindowPage.create_exit_button">
+<span class="sig-name descname"><span class="pre">create_exit_button</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.main_window.MainWindowPage.create_exit_button" title="Link to this definition">¶</a></dt>
+<dd><p>Кнопка «Выход».</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.main_window.MainWindowPage.create_minimize_button">
+<span class="sig-name descname"><span class="pre">create_minimize_button</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.main_window.MainWindowPage.create_minimize_button" title="Link to this definition">¶</a></dt>
+<dd><p>Кнопка «Свернуть».</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.main_window.MainWindowPage.create_side_bars">
+<span class="sig-name descname"><span class="pre">create_side_bars</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.main_window.MainWindowPage.create_side_bars" title="Link to this definition">¶</a></dt>
+<dd><p>Боковые полоски.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.main_window.MainWindowPage.create_title">
+<span class="sig-name descname"><span class="pre">create_title</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.main_window.MainWindowPage.create_title" title="Link to this definition">¶</a></dt>
+<dd><p>Заголовок и подсказка.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.main_window.MainWindowPage.create_top_bar">
+<span class="sig-name descname"><span class="pre">create_top_bar</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.main_window.MainWindowPage.create_top_bar" title="Link to this definition">¶</a></dt>
+<dd><p>Верхняя полоска.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.main_window.MainWindowPage.open_analytics">
+<span class="sig-name descname"><span class="pre">open_analytics</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.main_window.MainWindowPage.open_analytics" title="Link to this definition">¶</a></dt>
+<dd><p>Открывает страницу «Аналитика».</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.main_window.MainWindowPage.open_bouquet">
+<span class="sig-name descname"><span class="pre">open_bouquet</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.main_window.MainWindowPage.open_bouquet" title="Link to this definition">¶</a></dt>
+<dd><p>Открывает страницу «Собрать букет».</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.main_window.MainWindowPage.open_bouquets">
+<span class="sig-name descname"><span class="pre">open_bouquets</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.main_window.MainWindowPage.open_bouquets" title="Link to this definition">¶</a></dt>
+<dd><p>Открывает страницу «Мои букеты».</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.main_window.MainWindowPage.open_calendar">
+<span class="sig-name descname"><span class="pre">open_calendar</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.main_window.MainWindowPage.open_calendar" title="Link to this definition">¶</a></dt>
+<dd><p>Открывает страницу «Календарь».</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.main_window.MainWindowPage.open_clients">
+<span class="sig-name descname"><span class="pre">open_clients</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.main_window.MainWindowPage.open_clients" title="Link to this definition">¶</a></dt>
+<dd><p>Открывает страницу «Клиенты».</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.main_window.MainWindowPage.open_edit">
+<span class="sig-name descname"><span class="pre">open_edit</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.main_window.MainWindowPage.open_edit" title="Link to this definition">¶</a></dt>
+<dd><p>Открывает страницу редактирования справочников.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.main_window.MainWindowPage.open_spisanie">
+<span class="sig-name descname"><span class="pre">open_spisanie</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.main_window.MainWindowPage.open_spisanie" title="Link to this definition">¶</a></dt>
+<dd><p>Открывает страницу «Списание».</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.main_window.MainWindowPage.showMinimized">
+<span class="sig-name descname"><span class="pre">showMinimized</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.main_window.MainWindowPage.showMinimized" title="Link to this definition">¶</a></dt>
+<dd><p>Свернуть окно приложения.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-windows.pages.my_bouquets">
+<span id="windows-pages-my-bouquets-module"></span><h2>windows.pages.my_bouquets module<a class="headerlink" href="#module-windows.pages.my_bouquets" title="Ссылка на этот заголовок">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="windows.pages.my_bouquets.BouquetsPage">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">windows.pages.my_bouquets.</span></span><span class="sig-name descname"><span class="pre">BouquetsPage</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">app</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.my_bouquets.BouquetsPage" title="Link to this definition">¶</a></dt>
+<dd><p>Базовые классы: <code class="xref py py-class docutils literal notranslate"><span class="pre">QWidget</span></code></p>
+<p>Окно «Мои букеты».</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.my_bouquets.BouquetsPage.add_shadow">
+<span class="sig-name descname"><span class="pre">add_shadow</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">widget</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.my_bouquets.BouquetsPage.add_shadow" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.my_bouquets.BouquetsPage.add_soft_hyphens">
+<span class="sig-name descname"><span class="pre">add_soft_hyphens</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.my_bouquets.BouquetsPage.add_soft_hyphens" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.my_bouquets.BouquetsPage.cancel_checkbox_mode">
+<span class="sig-name descname"><span class="pre">cancel_checkbox_mode</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.my_bouquets.BouquetsPage.cancel_checkbox_mode" title="Link to this definition">¶</a></dt>
+<dd><p>Отмена режима галочек.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.my_bouquets.BouquetsPage.create_bottom_bar">
+<span class="sig-name descname"><span class="pre">create_bottom_bar</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.my_bouquets.BouquetsPage.create_bottom_bar" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.my_bouquets.BouquetsPage.create_buttons">
+<span class="sig-name descname"><span class="pre">create_buttons</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.my_bouquets.BouquetsPage.create_buttons" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.my_bouquets.BouquetsPage.create_exit_button">
+<span class="sig-name descname"><span class="pre">create_exit_button</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.my_bouquets.BouquetsPage.create_exit_button" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.my_bouquets.BouquetsPage.create_minimize_button">
+<span class="sig-name descname"><span class="pre">create_minimize_button</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.my_bouquets.BouquetsPage.create_minimize_button" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.my_bouquets.BouquetsPage.create_search">
+<span class="sig-name descname"><span class="pre">create_search</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.my_bouquets.BouquetsPage.create_search" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.my_bouquets.BouquetsPage.create_side_bars">
+<span class="sig-name descname"><span class="pre">create_side_bars</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.my_bouquets.BouquetsPage.create_side_bars" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.my_bouquets.BouquetsPage.create_status_label">
+<span class="sig-name descname"><span class="pre">create_status_label</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.my_bouquets.BouquetsPage.create_status_label" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.my_bouquets.BouquetsPage.create_table">
+<span class="sig-name descname"><span class="pre">create_table</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.my_bouquets.BouquetsPage.create_table" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.my_bouquets.BouquetsPage.create_title">
+<span class="sig-name descname"><span class="pre">create_title</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.my_bouquets.BouquetsPage.create_title" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.my_bouquets.BouquetsPage.create_top_bar">
+<span class="sig-name descname"><span class="pre">create_top_bar</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.my_bouquets.BouquetsPage.create_top_bar" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.my_bouquets.BouquetsPage.delete_bouquet">
+<span class="sig-name descname"><span class="pre">delete_bouquet</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.my_bouquets.BouquetsPage.delete_bouquet" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.my_bouquets.BouquetsPage.filter_bouquets">
+<span class="sig-name descname"><span class="pre">filter_bouquets</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.my_bouquets.BouquetsPage.filter_bouquets" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.my_bouquets.BouquetsPage.get_date_by_row">
+<span class="sig-name descname"><span class="pre">get_date_by_row</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">row</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.my_bouquets.BouquetsPage.get_date_by_row" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.my_bouquets.BouquetsPage.get_id_by_row">
+<span class="sig-name descname"><span class="pre">get_id_by_row</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">row</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.my_bouquets.BouquetsPage.get_id_by_row" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.my_bouquets.BouquetsPage.get_name_by_row">
+<span class="sig-name descname"><span class="pre">get_name_by_row</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">row</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.my_bouquets.BouquetsPage.get_name_by_row" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.my_bouquets.BouquetsPage.go_back">
+<span class="sig-name descname"><span class="pre">go_back</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.my_bouquets.BouquetsPage.go_back" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.my_bouquets.BouquetsPage.load_bouquets">
+<span class="sig-name descname"><span class="pre">load_bouquets</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.my_bouquets.BouquetsPage.load_bouquets" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.my_bouquets.BouquetsPage.on_double_click">
+<span class="sig-name descname"><span class="pre">on_double_click</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.my_bouquets.BouquetsPage.on_double_click" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.my_bouquets.BouquetsPage.on_item_changed">
+<span class="sig-name descname"><span class="pre">on_item_changed</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">item</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.my_bouquets.BouquetsPage.on_item_changed" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.my_bouquets.BouquetsPage.showMinimized">
+<span class="sig-name descname"><span class="pre">showMinimized</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.my_bouquets.BouquetsPage.showMinimized" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.my_bouquets.BouquetsPage.update_status_label">
+<span class="sig-name descname"><span class="pre">update_status_label</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.my_bouquets.BouquetsPage.update_status_label" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-windows.pages.report">
+<span id="windows-pages-report-module"></span><h2>windows.pages.report module<a class="headerlink" href="#module-windows.pages.report" title="Ссылка на этот заголовок">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="windows.pages.report.ReportPage">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">windows.pages.report.</span></span><span class="sig-name descname"><span class="pre">ReportPage</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">app</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.report.ReportPage" title="Link to this definition">¶</a></dt>
+<dd><p>Базовые классы: <code class="xref py py-class docutils literal notranslate"><span class="pre">QWidget</span></code></p>
+<p>Окно «Отчёт по списаниям».</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.report.ReportPage.add_shadow">
+<span class="sig-name descname"><span class="pre">add_shadow</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">widget</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.report.ReportPage.add_shadow" title="Link to this definition">¶</a></dt>
+<dd><p>Добавляет тень под элементом.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.report.ReportPage.create_bottom_bar">
+<span class="sig-name descname"><span class="pre">create_bottom_bar</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.report.ReportPage.create_bottom_bar" title="Link to this definition">¶</a></dt>
+<dd><p>Нижняя полоска.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.report.ReportPage.create_exit_button">
+<span class="sig-name descname"><span class="pre">create_exit_button</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.report.ReportPage.create_exit_button" title="Link to this definition">¶</a></dt>
+<dd><p>Кнопка «Назад».</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.report.ReportPage.create_minimize_button">
+<span class="sig-name descname"><span class="pre">create_minimize_button</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.report.ReportPage.create_minimize_button" title="Link to this definition">¶</a></dt>
+<dd><p>Кнопка «Свернуть».</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.report.ReportPage.create_period">
+<span class="sig-name descname"><span class="pre">create_period</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.report.ReportPage.create_period" title="Link to this definition">¶</a></dt>
+<dd><p>Выбор периода: день, неделя, год.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.report.ReportPage.create_period_fields">
+<span class="sig-name descname"><span class="pre">create_period_fields</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.report.ReportPage.create_period_fields" title="Link to this definition">¶</a></dt>
+<dd><p>Поля даты / диапазона / года.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.report.ReportPage.create_report_button">
+<span class="sig-name descname"><span class="pre">create_report_button</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.report.ReportPage.create_report_button" title="Link to this definition">¶</a></dt>
+<dd><p>Кнопка «Сформировать»</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.report.ReportPage.create_side_bars">
+<span class="sig-name descname"><span class="pre">create_side_bars</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.report.ReportPage.create_side_bars" title="Link to this definition">¶</a></dt>
+<dd><p>Боковые полоски.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.report.ReportPage.create_table">
+<span class="sig-name descname"><span class="pre">create_table</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.report.ReportPage.create_table" title="Link to this definition">¶</a></dt>
+<dd><p>Таблица для вывода отчёта.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.report.ReportPage.create_title">
+<span class="sig-name descname"><span class="pre">create_title</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.report.ReportPage.create_title" title="Link to this definition">¶</a></dt>
+<dd><p>Заголовок «Флора-учёт» и «Отчёт по списаниям».</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.report.ReportPage.create_top_bar">
+<span class="sig-name descname"><span class="pre">create_top_bar</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.report.ReportPage.create_top_bar" title="Link to this definition">¶</a></dt>
+<dd><p>Верхняя полоска.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.report.ReportPage.go_back">
+<span class="sig-name descname"><span class="pre">go_back</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.report.ReportPage.go_back" title="Link to this definition">¶</a></dt>
+<dd><p>Возврат на страницу «Списание».</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.report.ReportPage.load_data">
+<span class="sig-name descname"><span class="pre">load_data</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.report.ReportPage.load_data" title="Link to this definition">¶</a></dt>
+<dd><p>Загрузка отчёта из БД по выбранному периоду.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.report.ReportPage.showMinimized">
+<span class="sig-name descname"><span class="pre">showMinimized</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.report.ReportPage.showMinimized" title="Link to this definition">¶</a></dt>
+<dd><p>Свернуть окно приложения.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.report.ReportPage.update_period_fields">
+<span class="sig-name descname"><span class="pre">update_period_fields</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.report.ReportPage.update_period_fields" title="Link to this definition">¶</a></dt>
+<dd><p>Показывает нужные поля в зависимости от периода.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.report.ReportPage.update_week_to">
+<span class="sig-name descname"><span class="pre">update_week_to</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.report.ReportPage.update_week_to" title="Link to this definition">¶</a></dt>
+<dd><p>Автоматически ставит «По» = «С» + 6 дней (ровно неделя).</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-windows.pages.spisanie">
+<span id="windows-pages-spisanie-module"></span><h2>windows.pages.spisanie module<a class="headerlink" href="#module-windows.pages.spisanie" title="Ссылка на этот заголовок">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="windows.pages.spisanie.FlowerDropdown">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">windows.pages.spisanie.</span></span><span class="sig-name descname"><span class="pre">FlowerDropdown</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">flowers</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.spisanie.FlowerDropdown" title="Link to this definition">¶</a></dt>
+<dd><p>Базовые классы: <code class="xref py py-class docutils literal notranslate"><span class="pre">QPushButton</span></code></p>
+<p>Кнопка с выпадающим списком цветов (светлый, с ползунком).</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.spisanie.FlowerDropdown.currentText">
+<span class="sig-name descname"><span class="pre">currentText</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.spisanie.FlowerDropdown.currentText" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.spisanie.FlowerDropdown.on_item_clicked">
+<span class="sig-name descname"><span class="pre">on_item_clicked</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">item</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.spisanie.FlowerDropdown.on_item_clicked" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.spisanie.FlowerDropdown.refresh">
+<span class="sig-name descname"><span class="pre">refresh</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">flowers</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.spisanie.FlowerDropdown.refresh" title="Link to this definition">¶</a></dt>
+<dd><p>Перезаполнить список цветов.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.spisanie.FlowerDropdown.setCurrentIndex">
+<span class="sig-name descname"><span class="pre">setCurrentIndex</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.spisanie.FlowerDropdown.setCurrentIndex" title="Link to this definition">¶</a></dt>
+<dd><p>Совместимость с QComboBox — индекс 0 = сброс.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.spisanie.FlowerDropdown.show_menu_centered">
+<span class="sig-name descname"><span class="pre">show_menu_centered</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.spisanie.FlowerDropdown.show_menu_centered" title="Link to this definition">¶</a></dt>
+<dd><p>Перечитывает цветы из БД и показывает меню под кнопкой.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="windows.pages.spisanie.SpisaniePage">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">windows.pages.spisanie.</span></span><span class="sig-name descname"><span class="pre">SpisaniePage</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">app</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.spisanie.SpisaniePage" title="Link to this definition">¶</a></dt>
+<dd><p>Базовые классы: <code class="xref py py-class docutils literal notranslate"><span class="pre">QWidget</span></code></p>
+<p>Окно «Списание».</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.spisanie.SpisaniePage.add_shadow">
+<span class="sig-name descname"><span class="pre">add_shadow</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">widget</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.spisanie.SpisaniePage.add_shadow" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.spisanie.SpisaniePage.create_bottom_bar">
+<span class="sig-name descname"><span class="pre">create_bottom_bar</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.spisanie.SpisaniePage.create_bottom_bar" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.spisanie.SpisaniePage.create_buttons">
+<span class="sig-name descname"><span class="pre">create_buttons</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.spisanie.SpisaniePage.create_buttons" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.spisanie.SpisaniePage.create_exit_button">
+<span class="sig-name descname"><span class="pre">create_exit_button</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.spisanie.SpisaniePage.create_exit_button" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.spisanie.SpisaniePage.create_fields">
+<span class="sig-name descname"><span class="pre">create_fields</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.spisanie.SpisaniePage.create_fields" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.spisanie.SpisaniePage.create_minimize_button">
+<span class="sig-name descname"><span class="pre">create_minimize_button</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.spisanie.SpisaniePage.create_minimize_button" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.spisanie.SpisaniePage.create_side_bars">
+<span class="sig-name descname"><span class="pre">create_side_bars</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.spisanie.SpisaniePage.create_side_bars" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.spisanie.SpisaniePage.create_title">
+<span class="sig-name descname"><span class="pre">create_title</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.spisanie.SpisaniePage.create_title" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.spisanie.SpisaniePage.create_top_bar">
+<span class="sig-name descname"><span class="pre">create_top_bar</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.spisanie.SpisaniePage.create_top_bar" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.spisanie.SpisaniePage.go_back">
+<span class="sig-name descname"><span class="pre">go_back</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.spisanie.SpisaniePage.go_back" title="Link to this definition">¶</a></dt>
+<dd><p>Возврат на главное окно с карточками.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.spisanie.SpisaniePage.open_report">
+<span class="sig-name descname"><span class="pre">open_report</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.spisanie.SpisaniePage.open_report" title="Link to this definition">¶</a></dt>
+<dd><p>Открывает окно «Отчёт».</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.spisanie.SpisaniePage.showEvent">
+<span class="sig-name descname"><span class="pre">showEvent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">QShowEvent</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.spisanie.SpisaniePage.showEvent" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.spisanie.SpisaniePage.showMinimized">
+<span class="sig-name descname"><span class="pre">showMinimized</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.spisanie.SpisaniePage.showMinimized" title="Link to this definition">¶</a></dt>
+<dd><p>Свернуть окно приложения.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="windows.pages.spisanie.SpisaniePage.spisat">
+<span class="sig-name descname"><span class="pre">spisat</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#windows.pages.spisanie.SpisaniePage.spisat" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-windows.pages">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-windows.pages" title="Ссылка на этот заголовок">¶</a></h2>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">Флора-учёт</a></h1>
+
+
+
+
+
+
+
+
+<h3>Навигация</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Быстрый поиск</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Искать" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2026, Ламанова А.А..
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 7.4.7</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 0.7.16</a>
+      
+      |
+      <a href="_sources/windows.pages.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
